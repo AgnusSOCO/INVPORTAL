@@ -1,0 +1,78 @@
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Grid lines -->
+  <g stroke="#333" stroke-width="0.5" stroke-dasharray="5,5" opacity="0.2">
+    <line x1="50" y1="50" x2="750" y2="50"/>
+    <line x1="50" y1="100" x2="750" y2="100"/>
+    <line x1="50" y1="150" x2="750" y2="150"/>
+    <line x1="50" y1="200" x2="750" y2="200"/>
+    <line x1="50" y1="250" x2="750" y2="250"/>
+    <line x1="50" y1="300" x2="750" y2="300"/>
+    <line x1="50" y1="350" x2="750" y2="350"/>
+    
+    <line x1="50" y1="50" x2="50" y2="350"/>
+    <line x1="150" y1="50" x2="150" y2="350"/>
+    <line x1="250" y1="50" x2="250" y2="350"/>
+    <line x1="350" y1="50" x2="350" y2="350"/>
+    <line x1="450" y1="50" x2="450" y2="350"/>
+    <line x1="550" y1="50" x2="550" y2="350"/>
+    <line x1="650" y1="50" x2="650" y2="350"/>
+    <line x1="750" y1="50" x2="750" y2="350"/>
+  </g>
+  
+  <!-- X and Y axis -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#666" stroke-width="2"/>
+  <line x1="50" y1="50" x2="50" y2="350" stroke="#666" stroke-width="2"/>
+  
+  <!-- X axis labels -->
+  <text x="50" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Jan</text>
+  <text x="150" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Feb</text>
+  <text x="250" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Mar</text>
+  <text x="350" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Apr</text>
+  <text x="450" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">May</text>
+  <text x="550" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Jun</text>
+  <text x="650" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Jul</text>
+  <text x="750" y="370" font-family="Arial" font-size="12" fill="#888" text-anchor="middle">Aug</text>
+  
+  <!-- Y axis labels -->
+  <text x="40" y="350" font-family="Arial" font-size="12" fill="#888" text-anchor="end">0%</text>
+  <text x="40" y="300" font-family="Arial" font-size="12" fill="#888" text-anchor="end">5%</text>
+  <text x="40" y="250" font-family="Arial" font-size="12" fill="#888" text-anchor="end">10%</text>
+  <text x="40" y="200" font-family="Arial" font-size="12" fill="#888" text-anchor="end">15%</text>
+  <text x="40" y="150" font-family="Arial" font-size="12" fill="#888" text-anchor="end">20%</text>
+  <text x="40" y="100" font-family="Arial" font-size="12" fill="#888" text-anchor="end">25%</text>
+  <text x="40" y="50" font-family="Arial" font-size="12" fill="#888" text-anchor="end">30%</text>
+  
+  <!-- Chart title -->
+  <text x="400" y="30" font-family="Arial" font-size="16" fill="#888" text-anchor="middle">Investment Performance (YTD)</text>
+  
+  <!-- Data points -->
+  <circle cx="50" cy="280" r="4" fill="#10b981"/>
+  <circle cx="150" cy="250" r="4" fill="#10b981"/>
+  <circle cx="250" cy="200" r="4" fill="#10b981"/>
+  <circle cx="350" cy="170" r="4" fill="#10b981"/>
+  <circle cx="450" cy="130" r="4" fill="#10b981"/>
+  <circle cx="550" cy="100" r="4" fill="#10b981"/>
+  <circle cx="650" cy="80" r="4" fill="#10b981"/>
+  <circle cx="750" cy="70" r="4" fill="#10b981"/>
+  
+  <!-- Line chart -->
+  <path d="M50,280 L150,250 L250,200 L350,170 L450,130 L550,100 L650,80 L750,70" fill="none" stroke="url(#lineGradient)" stroke-width="3"/>
+  
+  <!-- Area under the curve -->
+  <path d="M50,280 L150,250 L250,200 L350,170 L450,130 L550,100 L650,80 L750,70 L750,350 L50,350 Z" fill="url(#areaGradient)"/>
+  
+  <!-- Current value indicator -->
+  <circle cx="750" cy="70" r="8" fill="#10b981" stroke="#fff" stroke-width="2"/>
+  <text x="750" y="55" font-family="Arial" font-size="14" fill="#10b981" text-anchor="middle" font-weight="bold">27.8%</text>
+</svg>
